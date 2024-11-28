@@ -67,3 +67,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Commande pour la création d'un projet laravel :
 composer create-project --prefer-dist laravel/laravel gestionnaire-de-contact
+
+Commande pour démarrer mysql : 
+sudo service mysql start

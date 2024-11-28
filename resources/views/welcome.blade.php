@@ -14,7 +14,20 @@
 
         <!-- Button to add new contact -->
         <div class="text-end mb-3">
-            <a href="#" class="btn btn-primary">Ajouter un contact</a>
+            <!-- Formulaire pour ajouter un contact -->
+            <form action="{{ route('contacts.store') }}" method="POST">
+                @csrf
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom" required><br><br>
+
+                <label for="prenom">Prénom:</label>
+                <input type="text" name="prenom" id="prenom" required><br><br>
+
+                <label for="numero">Numéro:</label>
+                <input type="text" name="numero" id="numero" required><br><br>
+
+                <button type="submit">Ajouter Contact</button>
+            </form>
         </div>
 
         <!-- Table of contacts -->
