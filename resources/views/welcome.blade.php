@@ -51,7 +51,12 @@
                         <td>{{ $contact->numero }}</td>
                         <td>
                             <a href="#" class="btn btn-warning btn-sm">Modifier</a>
-                            <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
+                            <!-- Bouton pour supprimer un contact -->
+                            <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

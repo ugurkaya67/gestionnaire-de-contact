@@ -37,4 +37,14 @@ class ContactController extends Controller
         // Redirection vers la page d'accueil avec un message de succès
         return redirect()->route('contacts.index')->with('success', 'Contact ajouté avec succès !');
     }
+
+    // Méthode pour supprimer un contact
+    public function destroy(Contact $contact)
+    {
+        // Supprimer le contact
+        $contact->delete();
+
+        // Rediriger vers la liste des contacts avec un message de succès
+        return redirect()->route('contacts.index')->with('success', 'Contact supprimé avec succès !');
+    }
 }
