@@ -50,7 +50,7 @@
                         <td>{{ $contact->prenom }}</td>
                         <td>{{ $contact->numero }}</td>
                         <td>
-                            <a href="#" class="btn btn-warning btn-sm">Modifier</a>
+                            <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-warning btn-sm">Modifier</a>
                             <!-- Bouton pour supprimer un contact -->
                             <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
                                 @csrf

@@ -11,3 +11,9 @@ Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.st
 
 // Route pour supprimer un contact
 Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
+
+// Afficher la page de modification
+Route::get('contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
+
+// Mettre à jour le contact
+Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('contacts.update');

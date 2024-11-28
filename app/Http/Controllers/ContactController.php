@@ -47,4 +47,27 @@ class ContactController extends Controller
         // Rediriger vers la liste des contacts avec un message de succès
         return redirect()->route('contacts.index')->with('success', 'Contact supprimé avec succès !');
     }
+
+    // Méthode pour afficher le formulaire d'édition
+    public function edit(Contact $contact)
+    {
+        return view('contacts.edit', compact('contact'));
+    }
+
+    // Méthode pour mettre à jour un contact
+    public function update(Request $request, Contact $contact)
+    {
+        // Validation des données
+        $validated = $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenom' => 'required|string|max:255',
+            'numero' => 'required|string|max:255',
+        ]);
+
+        // Mise à jour du contact
+        $contact->update($validated);
+
+        // Redirection avec message de succès
+        return redirect()->route('contacts.index')->with('success', 'Contact modifié avec succès');
+    }
 }
