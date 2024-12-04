@@ -1,0 +1,75 @@
+/* Style pour le tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px; /* Arrondir les coins du tableau */
+    overflow: hidden; /* Assurer que les coins arrondis sont appliqués correctement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère pour un effet visuel */
+}
+
+/* La première ligne (titres de colonne) */
+th {
+    background-color: #6f42c1; /* Couleur violet */
+    color: white;
+    border-top-left-radius: 10px; /* Arrondi en haut à gauche */
+    border-top-right-radius: 10px; /* Arrondi en haut à droite */
+    padding: 10px;
+}
+
+/* Les autres lignes (données du tableau) */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Gris clair */
+}
+
+tr:hover {
+    background-color: #ddd; /* Gris plus foncé au survol */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Arrondi des coins de chaque cellule */
+td:first-child {
+    border-left: 2px solid #ddd; /* Assurer une séparation nette entre les colonnes */
+}
+
+td:last-child {
+    border-right: 2px solid #ddd; /* Assurer une séparation nette entre les colonnes */
+}
+
+/* Bordure arrondie pour la dernière ligne du tableau */
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* Boutons d'actions */
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.text-end {
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+}
