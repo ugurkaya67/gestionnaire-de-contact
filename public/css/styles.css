@@ -1,6 +1,5 @@
 /* Style pour le tableau */
 table {
-    border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
     border-radius: 10px; /* Arrondir les coins du tableau */
@@ -70,6 +69,101 @@ tr:last-child td:last-child {
     margin-bottom: 20px;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style du formulaire */
 form {
+    background-color: #f4f4f9; /* Gris clair */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Titre du formulaire */
+form h2 {
+    color: #6f42c1; /* Violet */
+    text-align: center;
+}
+
+/* Label */
+form label {
+    font-size: 1.1rem;
+    color: #6f42c1; /* Violet */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Champs de texte */
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Bouton de soumission */
+form button {
+    background-color: #6f42c1; /* Violet */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100px;
+}
+
+form button:hover {
+    background-color: #4e2c9b; /* Violet plus foncé au survol */
+}
+
+/* Aligner les boutons dans la colonne Actions */
+td form {
     display: inline-block;
+    margin-right: 5px; /* Espacement entre les boutons */
+}
+
+td .btn {
+    display: inline-block; /* Aligne les boutons côte à côte */
+    margin-right: 5px; /* Espacement entre les boutons */
+}
+
+/* Style pour les boutons d'action */
+.btn-action {
+    min-width: 100px; /* Largeur minimale pour les boutons */
+    /* height: 35px; Hauteur fixe pour les boutons */ 
+    padding: 0; /* Enlève le padding sur tous les côtés */
+    text-align: center; /* Centrer horizontalement le texte */
+    border-radius: 5px; /* Arrondi des coins */
+    display: inline-block; /* Aligner les boutons côte à côte */
+    margin-right: 5px; /* Espacement entre les boutons */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold; /* Mettre le texte en gras */
+    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
+    transition: background-color 0.3s ease; /* Effet de transition pour les couleurs */
+}
+
+/* Couleur spécifique pour le bouton Modifier */
+.btn-action-modifier {
+    background-color: #ffc107; /* Couleur de fond jaune */
+    color: white;
+}
+
+.btn-action-modifier:hover {
+    background-color: #e0a800; /* Couleur de fond plus foncée au survol */
+}
+
+/* Couleur spécifique pour le bouton Supprimer */
+.btn-action-supprimer {
+    background-color: #dc3545; /* Couleur de fond rouge */
+    padding: 0 !important;
+}
+
+.btn-action-supprimer:hover {
+    background-color: #c82333; /* Couleur de fond plus foncée au survol */
 }

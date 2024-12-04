@@ -18,14 +18,16 @@
             <!-- Formulaire pour ajouter un contact -->
             <form action="{{ route('contacts.store') }}" method="POST">
                 @csrf
+                <h2>Ajouter un Nouveau Contact</h2>
+                
                 <label for="nom">Nom:</label>
-                <input type="text" name="nom" id="nom" required><br><br>
+                <input type="text" name="nom" id="nom" required>
 
                 <label for="prenom">Prénom:</label>
-                <input type="text" name="prenom" id="prenom" required><br><br>
+                <input type="text" name="prenom" id="prenom" required>
 
                 <label for="numero">Numéro:</label>
-                <input type="text" name="numero" id="numero" required><br><br>
+                <input type="text" name="numero" id="numero" required>
 
                 <button type="submit">Ajouter Contact</button>
             </form>
@@ -51,12 +53,14 @@
                         <td>{{ $contact->prenom }}</td>
                         <td>{{ $contact->numero }}</td>
                         <td>
-                            <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-warning btn-sm">Modifier</a>
-                            <!-- Bouton pour supprimer un contact -->
-                            <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;">
+                            <!-- Bouton Modifier avec la classe personnalisée -->
+                            <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-action btn-action-modifier">Modifier</a>
+
+                            <!-- Bouton Supprimer avec la classe personnalisée -->
+                            <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="padding: 0 !important;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                                <button type="submit" class="btn btn-action btn-action-supprimer" >Supprimer</button>
                             </form>
                         </td>
                     </tr>
